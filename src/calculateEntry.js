@@ -1,14 +1,5 @@
 const data = require('../data/zoo_data');
 
-const entrantsPersons = [
-  { name: 'Lara Carvalho', age: 5 },
-  { name: 'Frederico Moreira', age: 5 },
-  { name: 'Pedro Henrique Carvalho', age: 5 },
-  { name: 'Maria Costa', age: 18 },
-  { name: 'Núbia Souza', age: 18 },
-  { name: 'Carlos Nogueira', age: 50 },
-];
-
 const countEntrants = (entrants) => {
   // seu código aqui
   const entrantsAge = entrants.map((element) => {
@@ -39,6 +30,5 @@ const calculateEntry = (entrants) => {
   const calcTotal = childCalc + adultCalc + seniorCalc;
   return calcTotal;
 };
-console.log(calculateEntry(entrantsPersons));
 
 module.exports = { calculateEntry, countEntrants };
