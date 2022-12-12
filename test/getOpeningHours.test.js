@@ -53,13 +53,19 @@ describe('Testes da função getOpeningHours', () => {
 
   it('Retorna que o zoo está fecahdo se estiver.', () => {
     const expected = 'The zoo is closed';
-    const actual = getOpeningHours('Friday', '10:00-PM');
-    expect(actual).toEqual(expected);
+    const actual1 = getOpeningHours('Sunday', '10:00-PM');
+    const actual2 = getOpeningHours('Wednesday', '12:00-AM');
+    const actual3 = getOpeningHours('Monday', '12:00-PM');
+    expect(actual1).toEqual(expected);
+    expect(actual2).toEqual(expected);
+    expect(actual3).toEqual(expected);
   });
 
   it('Retorna que o zoo está aberto se estiver.', () => {
     const expected = 'The zoo is open';
     const actual = getOpeningHours('Friday', '12:00-PM');
+    const actual2 = getOpeningHours('Wednesday', '10:00-AM');
     expect(actual).toEqual(expected);
+    expect(actual2).toEqual(expected);
   });
 });
